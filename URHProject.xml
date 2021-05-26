@@ -1,0 +1,61 @@
+<?xml version="1.0" ?>
+<UniversalRadioHackerProject broadcast_address_hex="ffff" collapse_project_tabs="0" description="" modulation_was_edited="1">
+  <modulators>
+    <modulator bits_per_symbol="1" carrier_amplitude="1.0" carrier_freq_hz="40000.0" carrier_phase_deg="0.0" gauss_bt="0.5" gauss_filter_width="1.0" index="0" modulation_type="ASK" name="Modulator" parameters="0.0,100.0" sample_rate="None" samples_per_symbol="100"/>
+  </modulators>
+  <device_conf>
+    <apply_dc_correction>True</apply_dc_correction>
+    <bandwidth>2000000.0</bandwidth>
+    <bias_tee_enabled>False</bias_tee_enabled>
+    <freq_correction>1</freq_correction>
+    <frequency>433920000.0</frequency>
+    <gain>20</gain>
+    <name>RTL-SDR</name>
+    <num_sending_repeats>0</num_sending_repeats>
+    <rx_antenna_index>-1</rx_antenna_index>
+    <rx_baseband_gain>14</rx_baseband_gain>
+    <rx_gain>18</rx_gain>
+    <rx_if_gain>16</rx_if_gain>
+    <sample_rate>2000000.0</sample_rate>
+  </device_conf>
+  <simulator_rx_conf/>
+  <simulator_tx_conf/>
+  <signal bits_per_symbol="1" center="0.027526801568455994" center_spacing="1" costas_loop_bandwidth="0.1" filename="HackRF-20210525_154054-433_92MHz-2MSps-2MHz.complex16s" message_length_divisor="1" modulation_type="ASK" name="HackRF-20210525_154054-433_92MHz-2MSps-2MHz" noise_maximum="0.2043446453225375" noise_minimum="-1.2043446453225375" noise_threshold="1.0" pause_threshold="8" sample_rate="2000000.0" samples_per_symbol="2000" tolerance="7">
+    <messages/>
+  </signal>
+  <open_file name="HackRF-20210525_154054-433_92MHz-2MSps-2MHz.complex16s" position="0"/>
+  <group id="0" name="New Group">
+    <cf_protocol filename="HackRF-20210525_154054-433_92MHz-2MSps-2MHz.complex16s"/>
+  </group>
+  <protocol>
+    <decodings>
+      <decoding>'Non Return To Zero (NRZ)', </decoding>
+      <decoding>'Non Return To Zero + Invert', 'Invert', </decoding>
+      <decoding>'Manchester I', 'Edge Trigger', </decoding>
+      <decoding>'Manchester II', 'Edge Trigger', 'Invert', </decoding>
+      <decoding>'Differential Manchester', 'Edge Trigger', 'Differential Encoding', </decoding>
+    </decodings>
+    <participants>
+      <participant address_hex="" color_index="0" id="917bb0be-6fbf-4666-81a4-6d3da2183cfc" name="Alice" relative_rssi="0" shortname="A" simulate="0"/>
+      <participant address_hex="" color_index="1" id="c5964c9a-1308-46b7-99ec-ceb03e6651bd" name="Bob" relative_rssi="1" shortname="B" simulate="0"/>
+    </participants>
+    <messages>
+      <message decoding_index="0" message_type_id="d6d66f10-b271-462d-9035-9ed427aa28a6" modulator_index="0" pause="8408601" timestamp="1622051752.104157"/>
+      <message decoding_index="0" message_type_id="d6d66f10-b271-462d-9035-9ed427aa28a6" modulator_index="0" pause="2140030" timestamp="1622051752.1042418"/>
+    </messages>
+    <message_types>
+      <message_type assigned_by_logic_analyzer="0" assigned_by_ruleset="0" id="d6d66f10-b271-462d-9035-9ed427aa28a6" name="Default">
+        <label apply_decoding="True" auto_created="False" color_index="0" display_bit_order_index="1" display_endianness="big" display_format_index="0" end="10" fuzz_me="2" fuzz_values="" name="synchronization" show="2" start="0"/>
+        <label apply_decoding="True" auto_created="False" color_index="1" display_bit_order_index="1" display_endianness="big" display_format_index="1" end="19" fuzz_me="2" fuzz_values="" name="serial1" show="2" start="11"/>
+        <label apply_decoding="True" auto_created="False" color_index="2" display_bit_order_index="1" display_endianness="big" display_format_index="1" end="29" fuzz_me="2" fuzz_values="" name="serial2" show="2" start="21"/>
+        <label apply_decoding="True" auto_created="False" color_index="3" display_bit_order_index="1" display_endianness="big" display_format_index="1" end="39" fuzz_me="2" fuzz_values="" name="tempLow" show="2" start="31"/>
+        <label apply_decoding="True" auto_created="False" color_index="4" display_bit_order_index="1" display_endianness="big" display_format_index="1" end="49" fuzz_me="2" fuzz_values="" name="tempHigh" show="2" start="41"/>
+        <label apply_decoding="True" auto_created="False" color_index="5" display_bit_order_index="1" display_endianness="big" display_format_index="1" end="59" fuzz_me="2" fuzz_values="" name="mystery Trailer" show="2" start="51"/>
+        <ruleset mode="0"/>
+      </message_type>
+    </message_types>
+  </protocol>
+  <simulator_config>
+    <items/>
+  </simulator_config>
+</UniversalRadioHackerProject>
